@@ -21,9 +21,9 @@ Os 5 beats (fonte da verdade do texto: `docs/beats.md`, WAG-726):
 2. Destaque do navio C: faixa vermelha e card "80% de chance de 36 h de atraso"
 3. Avanço até D+3: tomada `port`, navio D fundeado esperando, berço ocupado
 4. Tomada `yard`: pilha seca a 92% em D+5, água baixando na régua
-5. Cenário A: fila se desfaz, pilha abaixo de 80%; corte para a tela T3
+5. Cenário A: fila se desfaz, pilha abaixo de 80%; frase de fechamento e volta ao deck
 
-O 3D ocupa **no máximo 40 s** da demo de 2 min. O resto são as telas T1 a T4 do Claude Design.
+As telas T1, T2 e T3 contam a história primeiro, como slides do deck; o 3D entra no fim como bônus, numa janela só, e ocupa **no máximo 40 s** da demo de 2 min. Se o tempo apertar, o bônus sai e a demo fecha na T3. Ordem e tempos em `docs/beats.md`.
 
 ## Divisão de papéis
 
