@@ -19,7 +19,7 @@ Os 5 beats (fonte da verdade do texto: `docs/beats.md`, WAG-726):
 
 1. `overview` em D0, 06h00: corredor inteiro, 7 navios com incerteza
 2. Destaque do navio C: faixa vermelha e card "80% de chance de 36 h de atraso"
-3. Avanço até D+3: tomada `port`, navio D fundeado esperando, berço ocupado
+3. Avanço até D+3: tomada `port`, navio D fundeado esperando, berço parado reservado para o C
 4. Tomada `yard`: pilha seca a 92% em D+5, água baixando na régua
 5. Cenário A: fila se desfaz, pilha abaixo de 80%
 

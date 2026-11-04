@@ -65,7 +65,7 @@ O protótipo fica aberto numa segunda aba da mesma janela do navegador, em `?bea
 | Pergunta da banca | Comece no beat | O que mostrar |
 | -- | -- | -- |
 | "Isso já existe? Roda de verdade?" | 1 | O corredor inteiro e as faixas de incerteza; avance até o 5 |
-| "Como o atraso de um navio afeta os outros?" | 3 | Berço ocupado e o D fundeado em D+3 |
+| "Como o atraso de um navio afeta os outros?" | 3 | Berço parado esperando o C e o D fundeado em D+3 |
 | "E o pátio? E se reduzir o seco?" | 4 | Pilha de seco a 92% em D+5; troque para o cenário B no alternador |
 | "E o rio, entra na conta?" | 4 | A água baixando na régua de Óbidos |
 | "O que muda com a decisão?" | 5 | Cenário A: a fila se desfaz e a pilha fica abaixo de 80% |
@@ -74,7 +74,7 @@ O protótipo fica aberto numa segunda aba da mesma janela do navegador, em `?bea
 | -- | -- |
 | 1 | O corredor inteiro, cada navio com a sua faixa. |
 | 2 | O C, em vermelho, com a faixa esticada. |
-| 3 | Três dias depois: o berço ocupado e o D fundeado esperando. |
+| 3 | Três dias depois: o berço parado esperando o C, e o D fundeado ao lado. |
 | 4 | Em D+5, a pilha de seco a 92%, e o rio baixando na régua. |
 | 5 | Com a decisão A, a fila se desfaz e a pilha fica abaixo de 80%. |
 
@@ -99,7 +99,7 @@ Todos vêm do `scenario.json`. O gerador (WAG-733) precisa reproduzi-los dentro 
 | Dito na fala | Onde | O que o cenário precisa ter |
 | -- | -- | -- |
 | 80% de chance de 36 h de atraso | T1, T2, 3D beat 2 | No `base`, probabilidade de o atraso de chegada do C a Porto Trombetas ser de 36 h ou mais igual a 80% |
-| D fundeado a partir de D+3 | T2, 3D beat 3 | No `base`, o D chega por volta de 72 h e espera fundeado com o berço ocupado |
+| D fundeado a partir de D+3 | T2, 3D beat 3 | No `base`, o D chega por volta de 72 h e espera fundeado com o berço parado, reservado para o C, que chega atrasado |
 | Rio em Óbidos perto do calado limite | T2, 3D beat 4 | Nível em queda até D+5, próximo de 11,70 m |
 | 2,1 / 1,2 dias de espera | T3 | Espera esperada somada: `base` 2,1, `A` 1,2 (`B` 2,0, na tela mas não dito) |
 | 43 mil dólares | T3 | Custo de oportunidade do `base`: US$ 43 mil |
