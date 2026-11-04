@@ -1,0 +1,36 @@
+/* Tokens visuais (WAG-732). Copiado sem mudança do bloco CSS de docs/tokens.md. */
+
+:root {
+  /* cores */
+  --color-bg: #0E1A22;
+  --color-surface: #15252F;
+  --color-border: #313F48;
+  --color-text: #E8EEF2;
+  --color-text-secondary: #A9B8C3;
+  --color-accent: #C2622D;
+  --color-ok: #3FB57A;
+  --color-warn: #E3A13B;
+  --color-danger: #E25A4F;
+  --color-uncertainty: rgba(255, 255, 255, 0.18);
+  --color-p50: #FFFFFF;
+
+  /* tipografia */
+  --font-ui: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --text-sm: 18px;
+  --text-md: 20px;
+  --text-lg: 24px;
+  --text-kpi: 28px;
+  --text-kpi-lg: 40px;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  /* espaçamento e raio */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+}

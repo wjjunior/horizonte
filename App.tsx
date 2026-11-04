@@ -6,6 +6,7 @@ import { useClock } from './clock/store.ts';
 import { Scene } from './scene/Scene.tsx';
 import { CAMERA_FOV, SHOTS } from './scene/shots.ts';
 import { DrawCallProbe } from './scene/DrawCallProbe.tsx';
+import { Overlays } from './ui/Overlays.tsx';
 
 export const WIDTH = 1920;
 export const HEIGHT = 1080;
@@ -39,6 +40,7 @@ export function App() {
           {loadError}
         </pre>
       )}
+      <Overlays />
       {import.meta.env.DEV && <Stats />}
     </div>
   );

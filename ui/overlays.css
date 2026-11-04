@@ -1,0 +1,296 @@
+/* Overlays HTML (WAG-738). Só variáveis de ui/tokens.css; nada abaixo de 18 px.
+   Acento (--color-accent) só no item ativo do alternador. */
+
+.ov-root {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* o canvas continua recebendo o mouse fora dos painéis */
+  font-family: var(--font-ui);
+  font-size: var(--text-md);
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+.ov-root p,
+.ov-root dl,
+.ov-root dd,
+.ov-root ol {
+  margin: 0;
+  padding: 0;
+}
+
+.ov-mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.ov-panel {
+  pointer-events: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+/* Alerta */
+
+.ov-alerts {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  width: 720px;
+}
+
+.ov-alert {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  padding: var(--space-2) var(--space-3);
+  border-left: 6px solid var(--color-danger);
+}
+
+.ov-alert-icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--color-danger);
+  color: var(--color-bg); /* 4,88:1 sobre o vermelho */
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-md);
+}
+
+.ov-alert-title {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.ov-alert-sub {
+  margin-top: 4px;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* KPIs e alternador */
+
+.ov-kpis {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 600px;
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.ov-stamp {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.ov-switch {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.ov-switch-btn {
+  flex: auto;
+  min-height: 48px;
+  padding: var(--space-1) var(--space-2);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  color: var(--color-text-secondary);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+}
+
+.ov-switch-btn:hover {
+  color: var(--color-text);
+}
+
+.ov-switch-btn[aria-checked='true'] {
+  border-color: var(--color-accent);
+  box-shadow: inset 0 -4px 0 var(--color-accent);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.ov-kpi-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ov-kpi {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  padding: 12px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.ov-kpi dt {
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.ov-kpi dd {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+  white-space: nowrap;
+}
+
+.ov-kpi-value {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-kpi-lg);
+  font-weight: var(--weight-medium);
+  line-height: 1.1;
+}
+
+.ov-kpi-unit {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Linha do tempo */
+
+.ov-timeline {
+  --thumb: 24px;
+  position: absolute;
+  left: var(--space-4);
+  right: var(--space-4);
+  bottom: 72px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-3);
+}
+
+.ov-play {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 2px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.ov-play:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.ov-clock {
+  flex: none;
+  width: 11ch; /* cabe "D+10, 06h00" */
+  white-space: nowrap;
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--text-kpi);
+  font-weight: var(--weight-medium);
+}
+
+.ov-track-wrap {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ov-track {
+  appearance: none;
+  width: 100%;
+  height: var(--thumb);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ov-track::-webkit-slider-runnable-track {
+  height: 8px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to right,
+    var(--color-text-secondary) var(--progress),
+    var(--color-uncertainty) var(--progress)
+  );
+}
+
+.ov-track::-webkit-slider-thumb {
+  appearance: none;
+  width: var(--thumb);
+  height: var(--thumb);
+  margin-top: calc((8px - var(--thumb)) / 2);
+  border: 3px solid var(--color-bg);
+  border-radius: 50%;
+  background: var(--color-p50);
+}
+
+.ov-track::-moz-range-track {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-uncertainty);
+}
+
+.ov-track::-moz-range-progress {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-text-secondary);
+}
+
+.ov-track::-moz-range-thumb {
+  width: var(--thumb);
+  height: var(--thumb);
+  border: 3px solid var(--color-bg);
+  border-radius: 50%;
+  background: var(--color-p50);
+}
+
+.ov-track:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.ov-root .ov-ticks {
+  position: relative;
+  height: 24px;
+  margin: 0 calc(var(--thumb) / 2);
+  list-style: none;
+}
+
+.ov-ticks li {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 24px;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* Rodapé */
+
+.ov-footer {
+  position: absolute;
+  left: var(--space-4);
+  bottom: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+}
