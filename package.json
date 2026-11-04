@@ -37,6 +37,7 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run --passWithNoTests",
     "generate": "node scripts/generate-scenario.ts",
-    "still": "node scripts/still.ts"
+    "still": "node scripts/still.ts",
+    "video": "node scripts/record-video.ts"
   }
 }
