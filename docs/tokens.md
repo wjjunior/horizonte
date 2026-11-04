@@ -32,7 +32,7 @@ Tema escuro de sala de controle, telas de 1920×1080. O deck usa tema claro e n�
 
 - **Inter** na UI (títulos, rótulos, corpo).
 - **IBM Plex Mono** em horários, datas, percentuais e números. Use `font-variant-numeric: tabular-nums` nos KPIs para os dígitos não pularem.
-- Ambas servidas localmente (`public/fonts`), sem CDN.
+- Ambas servidas localmente pelos pacotes `@fontsource/inter` e `@fontsource/ibm-plex-mono` (importados em `main.tsx` e empacotados pelo Vite), sem CDN.
 
 | Token | Tamanho | Uso |
 | -- | -- | -- |
