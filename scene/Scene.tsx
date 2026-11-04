@@ -4,6 +4,7 @@ import { Corridor } from './Corridor.tsx';
 import { Gauge } from './Gauge.tsx';
 import { Port } from './Port.tsx';
 import { River } from './River.tsx';
+import { Ships } from './Ships.tsx';
 
 // Cena estática do corredor, porto e rio (WAG-737). Os navios (WAG-739) entram como irmãos.
 export function Scene() {
@@ -17,6 +18,7 @@ export function Scene() {
       <Gauge />
       <Corridor />
       <Port />
+      <Ships />
     </>
   );
 }
