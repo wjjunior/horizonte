@@ -5,12 +5,11 @@ import type { Group, InstancedMesh } from 'three';
 import { activeScenario, useClock } from '../clock/store.ts';
 import { riverAt } from '../data/selectors.ts';
 import { BOARD } from './Board.tsx';
-import { ANCHORAGE_SLOTS, corridorCurve } from './corridor.ts';
+import { ANCHORAGE_SLOTS, corridorCurve, rightOf } from './corridor.ts';
 import { Label } from './Label.tsx';
 import { SCENE_COLORS } from './palette.ts';
-import { buildRiverGeometry, LEVEL_REF_M, waterY } from './river.ts';
-
-const OCEAN_X0 = 56;
+import { MOORING_BUOYS } from './portLayout.ts';
+import { buildRiverGeometry, LEVEL_REF_M, OCEAN_X0, waterY } from './river.ts';
 
 // Água (leito, Atlântico, linha do canal e boias do fundeio) num grupo cuja altura segue
 // riverAt(t).levelM.p50. Sem animação de onda (lista de corte).
@@ -44,22 +43,28 @@ export function River() {
   );
 }
 
-// Três boias nas posições de fundeio (InstancedMesh: uma draw call).
+// Boias: três nas posições de fundeio e duas de amarração no berço (WAG-751). InstancedMesh: uma draw call.
+const BUOYS = [...ANCHORAGE_SLOTS, ...MOORING_BUOYS];
+// Rótulo do fundeio ao norte da vaga mais perto do berço, puxado para oeste: nas tomadas port e yard,
+// o leste do fundeio fica atrás do painel de KPIs.
+const FUNDEIO_LABEL = ANCHORAGE_SLOTS[2]!.clone()
+  .addScaledVector(rightOf(1), 2.6)
+  .addScaledVector(corridorCurve.getTangentAt(1), 3);
+
 function Buoys() {
   const setRef = (m: InstancedMesh | null) => {
     if (!m) return;
     const mat = new Matrix4();
-    ANCHORAGE_SLOTS.forEach((p, i) => m.setMatrixAt(i, mat.makeTranslation(p.x, 0.25, p.z)));
+    BUOYS.forEach((p, i) => m.setMatrixAt(i, mat.makeTranslation(p.x, 0.25, p.z)));
     m.instanceMatrix.needsUpdate = true;
   };
-  const c = ANCHORAGE_SLOTS[1]!;
   return (
     <>
-      <instancedMesh ref={setRef} args={[undefined, undefined, ANCHORAGE_SLOTS.length]}>
+      <instancedMesh ref={setRef} args={[undefined, undefined, BUOYS.length]}>
         <cylinderGeometry args={[0.35, 0.35, 0.5, 6]} />
         <meshLambertMaterial color={SCENE_COLORS.buoy} flatShading />
       </instancedMesh>
-      <Label position={[c.x - 2.5, 1.2, c.z + 2.5]} text="Fundeio" size={1.1} color={SCENE_COLORS.labelMuted} />
+      <Label position={[FUNDEIO_LABEL.x, 1.2, FUNDEIO_LABEL.z]} text="Fundeio" size={1.1} color={SCENE_COLORS.labelMuted} />
     </>
   );
 }

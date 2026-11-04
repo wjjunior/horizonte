@@ -3,6 +3,7 @@ import { Board } from './Board.tsx';
 import { CameraDirector } from './CameraDirector.tsx';
 import { ClockDriver } from './ClockDriver.tsx';
 import { Corridor } from './Corridor.tsx';
+import { Forest } from './Forest.tsx';
 import { Gauge } from './Gauge.tsx';
 import { Port } from './Port.tsx';
 import { River } from './River.tsx';
@@ -22,6 +23,7 @@ export function Scene() {
       <Gauge />
       <Corridor />
       <Port />
+      <Forest />
       <Ships />
     </>
   );

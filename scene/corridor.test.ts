@@ -10,6 +10,7 @@ import {
   PLACES,
   pointAt,
   pointAtIndex,
+  rightOf,
 } from './corridor.ts';
 import { waterY } from './river.ts';
 
@@ -46,6 +47,22 @@ describe('corredor', () => {
   it('três posições de fundeio distintas', () => {
     expect(ANCHORAGE_SLOTS).toHaveLength(3);
     expect(ANCHORAGE_SLOTS[0]!.distanceTo(ANCHORAGE_SLOTS[1]!)).toBeGreaterThan(1);
+  });
+
+  // WAG-751: o Trombetas corre de leste para oeste em frente ao porto, que fica na margem sul.
+  it('o último trecho chega ao berço subindo para oeste, com a terra ao sul', () => {
+    expect(corridorCurve.getTangentAt(1).x).toBeLessThan(-0.95);
+    expect(rightOf(1).multiplyScalar(-1).z).toBeGreaterThan(0.9);
+  });
+
+  it('fundeio a jusante (leste) do berço, sem encostar no navio atracado; vaga 2 é a mais perto', () => {
+    for (const s of ANCHORAGE_SLOTS) {
+      expect(s.x).toBeGreaterThan(BERTH_POSITION.x);
+      expect(s.distanceTo(BERTH_POSITION)).toBeGreaterThan(3.5);
+    }
+    const d = ANCHORAGE_SLOTS.map((s) => s.distanceTo(BERTH_POSITION));
+    expect(d[2]!).toBeLessThan(d[1]!);
+    expect(d[1]!).toBeLessThan(d[0]!);
   });
 
   it('água desce quando o nível desce', () => {

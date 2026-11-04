@@ -19,4 +19,15 @@ export const SCENE_COLORS = {
   buoy: '#E3A13B',
   label: '#E8EEF2',
   labelMuted: '#9FB0BA',
+  // Planta do porto (WAG-751), paleta A: natural, mas apagada dentro do tema escuro. Nenhuma destas
+  // pode ser confundida com o verde, o âmbar ou o vermelho de status, nem com o ocre de seleção.
+  forest: ['#27403A', '#31503F', '#2B4838'], // mata em verde-petróleo apagado
+  yardGround: '#3E2A22', // chão de bauxita, ocre escuro
+  shedWall: '#4A3A33',
+  shedRoof: '#6E4030', // telhado de duas águas do galpão
+  building: '#4E5A61', // Usina II e Secagem
+  house: '#3A4A52', // vila de Porto Trombetas
+  houseRoof: '#553A30',
+  tank: '#7D8A92', // tanques da VIBRA
+  rail: '#2E3A40', // ferrovia e trilhos do pátio
 } as const;

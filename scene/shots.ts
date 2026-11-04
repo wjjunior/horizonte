@@ -11,8 +11,9 @@ export interface Shot {
 export const CAMERA_FOV = 35;
 
 export const SHOTS: Record<ShotName, Shot> = {
-  overview: { position: [10, 78, 74], target: [10, 0, -3] },
+  overview: { position: [6, 82, 78], target: [6, 0, -3] },
   barra: { position: [64, 24, 34], target: [50, 0, 3] },
-  port: { position: [-6, 32, 20], target: [-28, 0, -13] },
-  yard: { position: [-4, 26, 12], target: [-27, 1.5, -18] },
+  // WAG-751: recalibradas para a planta nova (berço na margem sul, fundeio a jusante, pátio a sudoeste).
+  port: { position: [-29, 38, 13.5], target: [-35, 0, -14.5] },
+  yard: { position: [-24, 30, 12], target: [-39, 1.5, -10] },
 };

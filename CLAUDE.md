@@ -94,6 +94,7 @@ Parâmetros de URL: `?record=1` toca os 5 beats com tempos fixos, sem interaçã
 - **Overlays:** DOM puro acima do canvas, com variáveis CSS copiadas de `docs/tokens.md`. `drei <Html>` só para os rótulos dos navios.
 - **Câmera:** tomadas nomeadas `overview`, `barra`, `port`, `yard`, com lerp amortecido. Setas esquerda/direita navegam os beats.
 - **Corredor esquemático e fora de escala**, com a ordem correta: Barra Norte, Fazendinha (praticagem), Macapá (fundeio), Óbidos (estação de nível), foz do Trombetas, Porto Trombetas. O aviso "esquemático, fora de escala" fica visível.
+- **Porto com "layout inspirado na planta real"** (WAG-751): o Trombetas passa em frente ao porto e segue rio acima; o porto fica na margem sul, o navio atraca paralelo à margem na ponta de uma ponte de acesso longa, e o fundeio fica no meio do rio, a jusante. Geometria em `scene/portLayout.ts`, fora de escala. As imagens do Google Maps e do Google Earth são só referência visual de disposição: nada decalcado, nenhuma imagem como textura ou no repo. Se um dia usar o OpenStreetMap (ODbL), "© colaboradores do OpenStreetMap" entra no rodapé do 3D.
 - Rodapé "Cenário ilustrativo, dados sintéticos" em toda tela e overlay.
 - Itens na lista de corte se faltar tempo: animação da água, navios fantasma.
 
@@ -115,7 +116,7 @@ Tipografia: Inter na UI, IBM Plex Mono em horários e números. Mínimo de 18 px
 
 ## Fora de escopo (descartado)
 
-Gêmeo digital realista e mapa georreferenciado: custo alto e risco de parecer enfeite para a banca do Porto.
+Gêmeo digital realista e mapa georreferenciado: custo alto e risco de parecer enfeite para a banca do Porto. O corredor segue esquemático; só o porto ganhou um layout inspirado na planta real (WAG-751), modelado à mão, sem escala.
 
 ## Fluxo de trabalho com o Linear
 
