@@ -48,7 +48,7 @@ As telas T1, T2 e T3 entram no deck como slides de tela cheia logo depois do sli
 
 **Tela:** base, A e B lado a lado, com fita do berço, leque do pátio seco, espera esperada e custo de oportunidade; botão "Registrar decisão".
 
-> O que eu faço. No base, a espera soma 2,1 dias de navio, uns 43 mil dólares, e o pátio de seco passa de 90% em D+5 com 64% de chance. O B, reduzir o seco em 8%, alivia o pátio, mas não mexe na fila. O A, antecipar o D, derruba a espera para 1,2 dia e o risco do pátio para 9%.
+> O que eu faço. No base, a espera soma 2,1 dias de navio, uns 43 mil dólares, e o pátio de seco passa de 90% em D+5 com 64% de chance. O B, reduzir o seco em 8%, alivia o pátio, mas não mexe na fila. O A, antecipar o D, derruba a espera para 1,2 dia e o risco do pátio para 12%.
 >
 > *(pausa)*
 >
@@ -104,7 +104,7 @@ Todos vêm do `scenario.json`. O gerador (WAG-733) precisa reproduzi-los dentro 
 | 2,1 / 1,2 dias de espera | T3 | Espera esperada somada: `base` 2,1, `A` 1,2 (`B` 2,1, igual ao base porque não mexe na fila; na tela, mas não dito) |
 | 43 mil dólares | T3 | Custo de oportunidade do `base`: US$ 43 mil |
 | 18 mil dólares num só evento | T3 | Diferença entre `base` e `A`: 0,9 dia × US$ 20.500 ≈ US$ 18,4 mil |
-| 64% / 9% de chance de passar de 90% | T3 | P(pátio seco > 90% em D+5): `base` 64%, `A` 9% (`B` 33%) |
+| 64% / 12% de chance de passar de 90% | T3 | P(pátio seco > 90% em D+5): `base` 64%, `A` 12% (`B` 33%) |
 | Pilha de seco a 92% em D+5 | 3D beat 4 (perguntas) | No `base`, P50 do pátio seco em 120 h igual a 92% da capacidade |
 | Pilha abaixo de 80% | 3D beat 5 (perguntas) | No `A`, P50 do pátio seco em 120 h abaixo de 80% da capacidade |
 

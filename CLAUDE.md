@@ -46,9 +46,9 @@ Metas que o gerador deve reproduzir (são metas de cenário, não resultados):
 
 | Indicador | Base | A | B |
 | -- | -- | -- | -- |
-| Espera esperada somada (dias de navio) | 2,1 | 1,2 | 2,0 |
+| Espera esperada somada (dias de navio) | 2,1 | 1,2 | 2,1 |
 | P(pátio seco > 90% em D+5) | 64% | 12% | 30% |
-| Custo de oportunidade (US$ 20.500/dia) | US$ 43 mil | US$ 24,6 mil | US$ 41 mil |
+| Custo de oportunidade (US$ 20.500/dia) | US$ 43 mil | US$ 24,6 mil | US$ 43 mil |
 
 Tolerância: ±0,1 dia e ±3 pontos percentuais. A mesma semente gera o mesmo arquivo byte a byte.
 
