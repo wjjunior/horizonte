@@ -19,11 +19,11 @@ Os 5 beats (fonte da verdade do texto: `docs/beats.md`, WAG-726):
 
 1. `overview` em D0, 06h00: corredor inteiro, 7 navios com incerteza
 2. Destaque do navio C: faixa vermelha e card "80% de chance de 36 h de atraso"
-3. Avanço até D+3: tomada `port`, navio D fundeado esperando, berço ocupado
+3. Avanço até D+3: tomada `port`, navio D fundeado esperando, berço parado reservado para o C
 4. Tomada `yard`: pilha seca a 92% em D+5, água baixando na régua
-5. Cenário A: fila se desfaz, pilha abaixo de 80%; corte para a tela T3
+5. Cenário A: fila se desfaz, pilha abaixo de 80%
 
-O 3D ocupa **no máximo 40 s** da demo de 2 min. O resto são as telas T1 a T4 do Claude Design.
+A demo de 2 min usa só as telas T1, T2 e T3, como slides do deck, e fecha na T3 com a decisão registrada e o valor em dólares. O 3D não entra na demo: fica aberto numa aba e aparece nas perguntas, com os 5 beats acima avançados pela seta. Fala, tempos e gatilhos em `docs/beats.md`.
 
 ## Divisão de papéis
 
@@ -111,7 +111,7 @@ Tipografia: Inter na UI, IBM Plex Mono em horários e números. Mínimo de 18 px
 
 ## Regra de corte
 
-**Às 16h00 de 04/11**, se os beats 1 a 3 do protótipo não estiverem rodando, o 3D fica só como still e a demo ao vivo usa apenas as telas do Claude Design. Não invista em polimento do 3D antes dos beats 1 a 3 funcionarem.
+**Às 16h00 de 04/11**, se os beats 1 a 3 do protótipo não estiverem rodando, o 3D fica só como still (capa e T1) e não é usado nas perguntas. Não invista em polimento do 3D antes dos beats 1 a 3 funcionarem.
 
 ## Fora de escopo (descartado)
 
