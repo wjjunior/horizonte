@@ -1,4 +1,6 @@
+import { Director } from '../demo/Director.tsx';
 import { Board } from './Board.tsx';
+import { CameraDirector } from './CameraDirector.tsx';
 import { ClockDriver } from './ClockDriver.tsx';
 import { Corridor } from './Corridor.tsx';
 import { Gauge } from './Gauge.tsx';
@@ -11,6 +13,8 @@ export function Scene() {
   return (
     <>
       <ClockDriver />
+      <Director />
+      <CameraDirector />
       <hemisphereLight args={['#DDE7EE', '#0E1A22', 1.4]} />
       <directionalLight position={[30, 60, 40]} intensity={1.6} />
       <Board />
