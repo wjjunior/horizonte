@@ -57,16 +57,16 @@ const P = {
   cInspectionWaitH: [11.4, 24.1] as const,
 
   // Pátio, em kt.
-  dryCapacityKt: 292,
-  dryStartKt: [66.4, 11.9] as const, // média e desvio
-  dryProductionKtH: [2.28, 0.175] as const, // média e desvio por rodada
-  dryDailyNoiseSd: 0.041,
+  dryCapacityKt: 310,
+  dryStartKt: [64.1, 5.2] as const, // média e desvio
+  dryProductionKtH: [2.44, 0.21] as const, // média e desvio por rodada
+  dryDailyNoiseSd: 0.081,
   // Com o galpão perto de cheio, a secagem desacelera: produção cai linearmente
   // de 100% em dryThrottleStart até zero na capacidade.
-  dryThrottleStart: 0.891,
+  dryThrottleStart: 0.887,
   scenarioBDryCut: 0.08,
   wetCapacityKt: 600,
-  wetStartKt: [330, 15] as const,
+  wetStartKt: [366, 15] as const, // 61% em D0, como na tela T1
   wetProductionKtH: [0.55, 0.04] as const,
 
   // Rio em Óbidos: queda exponencial de start para floor.
@@ -101,7 +101,7 @@ const SHIPS: ShipDef[] = [
   { id: 'C', cargo: 'umida', destination: 'Alumar', market: 'cabotagem', nominalTonnageKt: 50, plannedFundeio: 47, done: [], tideDelayed: true },
   { id: 'D', cargo: 'seca', destination: 'Europa', market: 'europa', nominalTonnageKt: 55, plannedFundeio: 72, done: [] },
   { id: 'E', cargo: 'umida', destination: 'Vila do Conde', market: 'cabotagem', nominalTonnageKt: 50, plannedFundeio: 140, done: [], riverLimited: true },
-  { id: 'F', cargo: 'seca', destination: 'Europa', market: 'europa', nominalTonnageKt: 55, plannedFundeio: 167, done: [] },
+  { id: 'F', cargo: 'umida', destination: 'Alumar', market: 'cabotagem', nominalTonnageKt: 55, plannedFundeio: 167, done: [] },
   { id: 'G', cargo: 'seca', destination: 'Ásia', market: 'asia', nominalTonnageKt: 55, plannedFundeio: 196, done: [] },
 ];
 
@@ -515,7 +515,7 @@ interface Check {
 const TARGETS: Record<ScenarioId, { waitDays: number; pYard: number }> = {
   base: { waitDays: 2.1, pYard: 0.64 },
   A: { waitDays: 1.2, pYard: 0.12 },
-  B: { waitDays: 2.0, pYard: 0.3 },
+  B: { waitDays: 2.1, pYard: 0.3 }, // o corte de seco não mexe na fila: espera igual à do base
 };
 
 function checks(file: ScenarioFile): Check[] {
