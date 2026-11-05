@@ -26,8 +26,7 @@ Porque cabe no edital: são 24% do orçamento global de R$ 750 mil do ciclo (Art
 
 | Item | Valor |
 | -- | -- |
-| Líder técnico em dedicação integral por 18 semanas | R$ 96 mil |
-| Ciência de dados em meio período por 18 semanas | R$ 32 mil |
+| Equipe da PoC, condução e apoio técnico, por 18 semanas | R$ 128 mil |
 | Nuvem e nó local em Porto Trombetas | R$ 11 mil |
 | Dados AIS, 5 meses | R$ 6 mil |
 | Visita técnica, treinamento e materiais | R$ 8 mil |
@@ -35,7 +34,7 @@ Porque cabe no edital: são 24% do orçamento global de R$ 750 mil do ciclo (Art
 | Tributos (Simples Nacional, estimativa) | R$ 22 mil |
 | **Total** | **R$ 180 mil** |
 
-A etapa de escala, de R$ 450 mil a R$ 580 mil, fica fora do edital e só se contrata se o Demo Day confirmar o valor. Equipe: o cientista de dados sênior é indicado nominalmente na Imersão, junto com o plano de trabalho. `[A CONFIRMAR: se a WAG-728 decidir nomear antes da entrevista, troque esta frase pelo nome.]` (seções 10 e 12)
+A etapa de escala, de R$ 450 mil a R$ 580 mil, fica fora do edital e só se contrata se o Demo Day confirmar o valor. Equipe: Patryck Giovani da Silva conduz a PoC; Wagner de Jesus Junior e Marco Drummond dão apoio técnico. A dedicação de cada um e a divisão da linha de equipe entram no plano de trabalho da Imersão. (seção 12; equipe atualizada em 04/11, a seção 10 previa um cientista de dados indicado na Imersão)
 
 **7. "De quem é o código?" (Art. 24º)**
 O motor de previsão e simulação é preexistente e fica com a Wagner Junior LTDA; a MRN recebe licença não exclusiva de uso interno durante a PoC e, havendo interesse, na continuidade. Os modelos calibrados com dados da MRN, os relatórios, a base de dados organizada e o código específico da PoC pertencem à MRN. Os apontamentos à minuta de contrato seguem essa divisão. (seção 20)
